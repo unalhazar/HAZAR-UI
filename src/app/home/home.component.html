@@ -1,0 +1,8 @@
+<div *ngIf="!secureData">
+    Loading secure data...
+</div>
+
+<div *ngIf="secureData">
+    <h2>Secure Data</h2>
+    <pre>{{ secureData | json }}</pre>
+</div>
