@@ -3,10 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
@@ -15,6 +13,12 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { RatingModule } from 'primeng/rating';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ConfirmationService } from 'primeng/api';
+// PrimeNG Modülleri
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { ButtonModule } from 'primeng/button';
+import { ProgressSpinnerModule } from 'primeng/progressspinner'; // Yükleme göstergesi için
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -31,6 +35,7 @@ import { CommonModule } from '@angular/common';
     ],
     imports: [
         BrowserModule,
+        CardModule,
         BrowserAnimationsModule,
         FormsModule,
         TableModule,
@@ -46,7 +51,8 @@ import { CommonModule } from '@angular/common';
         RadioButtonModule,
         DropdownModule,
         ButtonModule,
-        AppRoutingModule
+        AppRoutingModule,
+        PasswordModule,ProgressSpinnerModule
     ],
     providers: [
         ConfirmationService,
